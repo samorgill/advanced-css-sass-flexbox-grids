@@ -31,7 +31,29 @@ body {
     ,url(../images/hero.jpg);
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position: relative;
 }
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
