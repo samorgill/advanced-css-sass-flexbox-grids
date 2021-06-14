@@ -42,17 +42,23 @@ body {
     height: 35px;
 }
 
+.logo:hover {
+    animation: moveInRight 1s ease-out;
+}
+
 .text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -70,7 +76,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
-    animation: moveInRight  .5s ease-out;
+    animation: moveInRight .5s ease-out;
 }
 
 @keyframes moveInLeft {
@@ -105,6 +111,30 @@ body {
     }
 }
 
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 7px rgba(0,0,0,.3);
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
+}
 
 
 
