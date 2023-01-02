@@ -142,14 +142,11 @@ body {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    background-color: darken($color-primary, 5%);
+    @include button-hover;
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .3rem .7rem rgba(0, 0, 0, .3);
+    @include button-active;
 }
 
 .btn--white {
