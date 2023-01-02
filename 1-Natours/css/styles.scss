@@ -63,7 +63,7 @@ body {
     color: $color-primary;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
+    margin-bottom: divide(12, 2) * 1px;
 
     .heading-primary--main {
         display: block;

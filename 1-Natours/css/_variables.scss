@@ -17,3 +17,7 @@ $dark-green: rgba(40, 180, 133, .8);
 @mixin background-color($color) {
   background-color: $color;
 }
+
+@function divide($a, $b) {
+  @return $a / $b
+}

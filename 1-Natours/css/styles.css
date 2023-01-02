@@ -53,7 +53,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
+  margin-bottom: 6px;
 }
 .heading-primary .heading-primary--main {
   display: block;
