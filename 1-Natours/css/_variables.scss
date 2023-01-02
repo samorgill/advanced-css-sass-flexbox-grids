@@ -13,3 +13,7 @@ $dark-green: rgba(40, 180, 133, .8);
   transform: translateY(-1px);
   box-shadow: 0 .3rem .7rem rgba(0, 0, 0, .3);
 }
+
+@mixin background-color($color) {
+  background-color: $color;
+}

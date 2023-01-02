@@ -150,8 +150,9 @@ body {
 }
 
 .btn--white {
-    background-color: $color-primary;
     color: $color-secondary;
+
+    @include background-color($color-primary);
 }
 
 .btn::after {
@@ -168,7 +169,7 @@ body {
 }
 
 .btn--white::after {
-    background-color: $color-primary;
+    @include background-color($color-primary);
 }
 
 .btn:hover::after {
