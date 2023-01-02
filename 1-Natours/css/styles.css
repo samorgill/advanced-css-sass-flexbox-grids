@@ -3,7 +3,6 @@
     Light green: #7ed56f
     Medium green: #55c57a
     Dark green: #28b485
-
 */
 * {
   margin: 0;
@@ -124,6 +123,7 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f2;
 }
 
 .btn:active {
