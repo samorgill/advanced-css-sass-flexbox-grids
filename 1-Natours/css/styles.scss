@@ -129,16 +129,20 @@ body {
     }
 }
 
+%btn-placeholder {
+    display: inline-block;
+    border-radius: 10rem;
+}
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
     transition: all .2s;
     position: relative;
     font-size: 1.6rem;
+    @extend %btn-placeholder;
 }
 
 .btn:hover {
@@ -151,21 +155,19 @@ body {
 
 .btn--white {
     color: $color-secondary;
-
     @include background-color($color-primary);
 }
 
 .btn::after {
     content: "";
-    display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: all .5s;
+    @extend %btn-placeholder;
 }
 
 .btn--white::after {

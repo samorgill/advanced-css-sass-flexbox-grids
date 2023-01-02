@@ -108,13 +108,17 @@ body {
     transform: translateY(0);
   }
 }
+.btn::after, .btn:link,
+.btn:visited {
+  display: inline-block;
+  border-radius: 10rem;
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
@@ -138,10 +142,8 @@ body {
 
 .btn::after {
   content: "";
-  display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
