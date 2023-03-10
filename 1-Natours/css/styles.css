@@ -1,9 +1,3 @@
-/*
-    COLORS:
-    Light green: #7ed56f
-    Medium green: #55c57a
-    Dark green: #28b485
-*/
 * {
   margin: 0;
   padding: 0;
@@ -30,32 +24,31 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   position: relative;
 }
-.header .header__logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-.header .header__logo {
+.header__logo {
   height: 3.5rem;
 }
-.header .header__logo:hover {
+.header__logo:hover {
   animation: moveInRight 1s ease-out;
 }
-.header .header__text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.heading-primary {
+.header__text-box .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6px;
 }
-.heading-primary .heading-primary--main {
+.header__text-box .heading-primary--main {
   display: block;
   font-size: 60px;
   font-weight: 400;
@@ -64,7 +57,7 @@ body {
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }
-.heading-primary .heading-primary--sub {
+.header__text-box .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -108,14 +101,12 @@ body {
     transform: translateY(0);
   }
 }
-.btn::after, .btn:link,
-.btn:visited {
+.btn::after, .btn:link, .btn:visited {
   display: inline-block;
   border-radius: 10rem;
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -123,23 +114,26 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   background-color: #f2f2f2;
 }
-
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.3);
 }
-
 .btn--white {
   color: #777;
   background-color: #fff;
 }
-
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   height: 100%;
@@ -150,16 +144,6 @@ body {
   z-index: -1;
   transition: all 0.5s;
 }
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.25s;
   animation-fill-mode: backwards;

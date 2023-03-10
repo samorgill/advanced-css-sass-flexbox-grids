@@ -1,12 +1,5 @@
 @import './_variables.scss';
 
-/*
-    COLORS:
-    Light green: #7ed56f
-    Medium green: #55c57a
-    Dark green: #28b485
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +15,7 @@ body {
     font-weight: 400;
     /*font-size: 1.6rem;*/
     line-height: 1.7;
-    color: #777;
+    color: $color-grey;
     padding: 3rem;
 }
 
@@ -36,51 +29,51 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     position: relative;
 
-    .header__logo-box {
+    &__logo-box {
         position: absolute;
         top: 4rem;
         left: 4rem;
     }
 
-    .header__logo {
+    &__logo {
         height: 3.5rem;
     }
 
-    .header__logo:hover {
+    &__logo:hover {
         animation: moveInRight 1s ease-out;
     }
 
-    .header__text-box {
+    &__text-box {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-    }
-}
 
-.heading-primary {
-    color: $color-primary;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: divide(12, 2) * 1px;
+        .heading-primary {
+            color: $color-white;
+            text-transform: uppercase;
+            backface-visibility: hidden;
+            margin-bottom: divide(12, 2) * 1px;
 
-    .heading-primary--main {
-        display: block;
-        font-size: 60px;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        animation-name: moveInLeft;
-        animation-duration: .5s;
-        animation-timing-function: ease-out;
-    }
+            &--main {
+                display: block;
+                font-size: 60px;
+                font-weight: 400;
+                letter-spacing: 3.5rem;
+                animation-name: moveInLeft;
+                animation-duration: .5s;
+                animation-timing-function: ease-out;
+            }
 
-    .heading-primary--sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.74rem;
-        animation: moveInRight .5s ease-out;
+            &--sub {
+                display: block;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 1.74rem;
+                animation: moveInRight .5s ease-out;
+            }
+        }
     }
 }
 
@@ -134,54 +127,57 @@ body {
     border-radius: 10rem;
 }
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-    @extend %btn-placeholder;
-}
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+        @extend %btn-placeholder;
+    }
 
-.btn:hover {
-    @include button-hover;
-}
+    &:hover {
+        @include button-hover;
 
-.btn:active {
-    @include button-active;
-}
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
 
-.btn--white {
-    color: $color-secondary;
-    @include background-color($color-primary);
-}
+    &:active {
+        @include button-active;
+    }
 
-.btn::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .5s;
-    @extend %btn-placeholder;
-}
+    &--white {
+        color: $color-grey;
+        @include background-color($color-white);
 
-.btn--white::after {
-    @include background-color($color-primary);
-}
+        &::after {
+            @include background-color($color-white);
+        }
+    }
 
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+    &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s;
+        @extend %btn-placeholder;
+    }
 
-.btn--animated {
-    animation: moveInBottom .5s ease-out .25s;
-    animation-fill-mode: backwards;
+    &--animated {
+        animation: moveInBottom .5s ease-out .25s;
+        animation-fill-mode: backwards;
+    }
+
 }
 
 
